@@ -1,0 +1,25 @@
+# Backend (Maven)
+eislop-backend/target/
+eislop-backend/.idea/
+eislop-backend/.project
+eislop-backend/.settings/
+*.class
+*.log
+*.iml
+*.jar
+*.war
+
+# Frontend (Node/Vite)
+eislop-frontend/node_modules/
+eislop-frontend/dist/
+eislop-frontend/.vite/
+eislop-frontend/.env*
+eislop-frontend/.DS_Store
+
+# IDE/Editor
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
