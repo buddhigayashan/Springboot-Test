@@ -105,7 +105,7 @@ public class DataLoader {
             // Stock
             if (stockRepository.count() == 0) {
                 Stock st = Stock.builder()
-                        .productId(productRepository.findAll().get(0).getId())
+                        .productId(productRepository.findAll().getFirst().getId())
                         .quantityOnHand(100)
                         .reorderLevel(20)
                         .build();
