@@ -5,7 +5,7 @@ import Loader from './components/Loader.jsx';
 
 const App = () => (
   <Suspense fallback={<Loader message="Loading EISLOP..." />}>
-    <RouterProvider router={routes} />
+    <RouterProvider router={routes} future={{ v7_startTransition: true }} />
   </Suspense>
 );
 

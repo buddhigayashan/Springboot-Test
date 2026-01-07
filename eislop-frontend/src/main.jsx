@@ -5,6 +5,7 @@ import './styles/tailwind.css';
 import { AuthProvider } from './context/AuthContext.jsx';
 import { AnalyticsProvider } from './context/AnalyticsContext.jsx';
 import { Toaster } from 'react-hot-toast';
+import './config/chartjs.js';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
