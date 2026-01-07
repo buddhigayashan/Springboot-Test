@@ -17,6 +17,7 @@ com\eislop\repository\DeliveryRepository.class
 com\eislop\entity\PurchaseOrder.class
 com\eislop\repository\VehicleRepository.class
 com\eislop\service\impl\PurchaseOrderServiceImpl.class
+com\eislop\security\JwtUtil.class
 com\eislop\service\impl\ProductServiceImpl.class
 com\eislop\service\impl\SupplierServiceImpl.class
 com\eislop\entity\Stock.class
@@ -52,6 +53,7 @@ com\eislop\config\WebConfig$1.class
 com\eislop\entity\RouteAssignment$RouteAssignmentBuilder.class
 com\eislop\config\DataLoader.class
 com\eislop\service\SupplierService.class
+com\eislop\security\MongoUserDetailsService.class
 com\eislop\dto\ProductDto.class
 com\eislop\dto\LoginRequest.class
 com\eislop\service\impl\VehicleServiceImpl.class

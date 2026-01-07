@@ -21,7 +21,8 @@ public class DataLoader {
             DeliveryRepository deliveryRepository,
             PurchaseOrderRepository purchaseOrderRepository,
             RouteAssignmentRepository routeAssignmentRepository,
-            StockRepository stockRepository
+            StockRepository stockRepository,
+            org.springframework.security.crypto.password.PasswordEncoder passwordEncoder
     ) {
         return args -> {
             // Users
@@ -29,7 +30,8 @@ public class DataLoader {
                 User admin = User.builder()
                         .name("Admin User")
                         .email("admin@eislop.local")
-                        .password("changeme")
+                        .password(passwordEncoder.encode("changeme"))
+                        .roles(new java.util.HashSet<>(java.util.Set.of("ADMIN")))
                         .build();
                 userRepository.save(admin);
             }

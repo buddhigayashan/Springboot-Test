@@ -1,7 +1,10 @@
 import axios from 'axios';
 
+const isDev = typeof window !== 'undefined' && window.location.port === '5173';
+const baseURL = isDev ? '/api' : (import.meta.env.VITE_API_BASE_URL || 'http://localhost:8082');
+
 const axiosInstance = axios.create({
-  baseURL: import.meta.env.VITE_API_BASE_URL || 'http://localhost:8082',
+  baseURL,
   timeout: 15000
 });
 
