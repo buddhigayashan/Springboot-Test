@@ -59,9 +59,10 @@ public class DataLoader {
             // Vehicles
             if (vehicleRepository.count() == 0) {
                 Vehicle v = Vehicle.builder()
-                        .plateNumber("ABC-1234")
-                        .model("Van")
-                        .capacity(1200)
+                        .registrationNumber("ABC-1234")
+                        .type("Van")
+                        .capacityKg(1200)
+                        .status("AVAILABLE")
                         .build();
                 vehicleRepository.save(v);
             }
@@ -95,6 +96,7 @@ public class DataLoader {
             if (purchaseOrderRepository.count() == 0) {
                 PurchaseOrder po = PurchaseOrder.builder()
                         .orderNumber("PO-0001")
+                        .supplier("Acme Supplies")
                         .status("OPEN")
                         .totalAmount(299.99)
                         .expectedDate(LocalDate.now().plusDays(10))

@@ -18,7 +18,8 @@ public class Vehicle {
 
     @Id
     private String id;
-    private String plateNumber;
-    private String model;
-    private Integer capacity;
+    private String registrationNumber;
+    private String type;
+    private Integer capacityKg;
+    private String status;
 }

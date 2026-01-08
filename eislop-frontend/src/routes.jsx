@@ -44,6 +44,10 @@ const routes = createBrowserRouter([
       }
     ]
   }
-]);
+], {
+  future: {
+    v7_startTransition: true
+  }
+});
 
 export default routes;

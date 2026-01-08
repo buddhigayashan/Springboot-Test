@@ -1,6 +1,8 @@
+com\eislop\config\GlobalExceptionHandler.class
 com\eislop\service\impl\DriverServiceImpl.class
 com\eislop\service\VehicleService.class
 com\eislop\entity\Supplier.class
+com\eislop\config\SecurityConfig.class
 com\eislop\entity\Vehicle$VehicleBuilder.class
 com\eislop\dto\VehicleDto.class
 com\eislop\entity\Product.class
@@ -38,9 +40,11 @@ com\eislop\config\WebConfig.class
 com\eislop\dto\AuthResponse$AuthResponseBuilder.class
 com\eislop\entity\Stock$StockBuilder.class
 com\eislop\entity\Delivery$DeliveryBuilder.class
+com\eislop\config\RequestLoggingFilter.class
 com\eislop\dto\AuthResponse.class
 com\eislop\entity\User.class
 com\eislop\service\PurchaseOrderService.class
+com\eislop\controller\HealthController.class
 com\eislop\repository\RouteAssignmentRepository.class
 com\eislop\repository\PurchaseOrderRepository.class
 com\eislop\entity\Vehicle.class
@@ -50,6 +54,7 @@ com\eislop\config\WebConfig$1.class
 com\eislop\entity\RouteAssignment$RouteAssignmentBuilder.class
 com\eislop\config\DataLoader.class
 com\eislop\service\SupplierService.class
+com\eislop\security\MongoUserDetailsService.class
 com\eislop\dto\ProductDto.class
 com\eislop\dto\LoginRequest.class
 com\eislop\service\impl\VehicleServiceImpl.class
