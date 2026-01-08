@@ -21,7 +21,7 @@ public class PurchaseOrder {
     @Id
     private String id;
     private String orderNumber;
-    private String supplierId;
+    private String supplier;
     private String status;
     private Double totalAmount;
     private LocalDate expectedDate;

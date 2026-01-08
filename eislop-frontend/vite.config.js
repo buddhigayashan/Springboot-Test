@@ -10,7 +10,22 @@ export default defineConfig({
       '/api': {
         target: 'http://localhost:8082',
         changeOrigin: true,
-        secure: false
+        secure: false,
+        configure: (proxy) => {
+          proxy.on('error', (err, req) => {
+            console.error('[Proxy Error] /api', req?.method, req?.url, err?.code || err?.message);
+          });
+        }
+      },
+      '/auth': {
+        target: 'http://localhost:8082',
+        changeOrigin: true,
+        secure: false,
+        configure: (proxy) => {
+          proxy.on('error', (err, req) => {
+            console.error('[Proxy Error] /auth', req?.method, req?.url, err?.code || err?.message);
+          });
+        }
       }
     }
   },

@@ -1,3 +1,4 @@
+com\eislop\config\GlobalExceptionHandler.class
 com\eislop\service\impl\DriverServiceImpl.class
 com\eislop\service\VehicleService.class
 com\eislop\entity\Supplier.class
@@ -17,7 +18,6 @@ com\eislop\repository\DeliveryRepository.class
 com\eislop\entity\PurchaseOrder.class
 com\eislop\repository\VehicleRepository.class
 com\eislop\service\impl\PurchaseOrderServiceImpl.class
-com\eislop\security\JwtUtil.class
 com\eislop\service\impl\ProductServiceImpl.class
 com\eislop\service\impl\SupplierServiceImpl.class
 com\eislop\entity\Stock.class
@@ -29,7 +29,6 @@ com\eislop\controller\FleetController.class
 com\eislop\repository\UserRepository.class
 com\eislop\entity\User$UserBuilder.class
 com\eislop\dto\DeliveryDto.class
-com\eislop\security\JwtAuthenticationFilter.class
 com\eislop\dto\StockDto.class
 com\eislop\controller\SupplyController.class
 com\eislop\service\DriverService.class
@@ -41,9 +40,11 @@ com\eislop\config\WebConfig.class
 com\eislop\dto\AuthResponse$AuthResponseBuilder.class
 com\eislop\entity\Stock$StockBuilder.class
 com\eislop\entity\Delivery$DeliveryBuilder.class
+com\eislop\config\RequestLoggingFilter.class
 com\eislop\dto\AuthResponse.class
 com\eislop\entity\User.class
 com\eislop\service\PurchaseOrderService.class
+com\eislop\controller\HealthController.class
 com\eislop\repository\RouteAssignmentRepository.class
 com\eislop\repository\PurchaseOrderRepository.class
 com\eislop\entity\Vehicle.class

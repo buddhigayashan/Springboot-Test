@@ -3,6 +3,7 @@ package com.eislop.service.impl;
 import com.eislop.entity.Driver;
 import com.eislop.repository.DriverRepository;
 import com.eislop.service.DriverService;
+import org.springframework.lang.NonNull;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -19,9 +20,10 @@ public class DriverServiceImpl implements DriverService {
     public List<Driver> findAll() { return driverRepository.findAll(); }
 
     @Override
-    public Driver save(Driver driver) { return driverRepository.save(driver); }
+    @NonNull
+public Driver save(@NonNull Driver driver) { return driverRepository.save(driver); }
 
     @Override
-    public void deleteById(String id) { driverRepository.deleteById(id); }
+    public void deleteById(@NonNull String id) { driverRepository.deleteById(id); }
 }
 

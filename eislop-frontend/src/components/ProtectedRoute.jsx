@@ -3,16 +3,11 @@ import { useAuth } from '../hooks/useAuth.js';
 import Loader from './Loader.jsx';
 
 const ProtectedRoute = ({ allowedRoles }) => {
-  const { isAuthenticated, user, loading } = useAuth();
+  const { loading } = useAuth();
   if (loading) {
-    return <Loader message="Verifying session..." />;
+    return <Loader message="Loading..." />;
   }
-  if (!isAuthenticated) {
-    return <Navigate to="/auth/login" replace />;
-  }
-  if (allowedRoles && allowedRoles.length > 0 && !allowedRoles.includes(user?.role)) {
-    return <Navigate to="/" replace />;
-  }
+  // Auth disabled: always allow
   return <Outlet />;
 };
 

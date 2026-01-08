@@ -21,8 +21,7 @@ public class DataLoader {
             DeliveryRepository deliveryRepository,
             PurchaseOrderRepository purchaseOrderRepository,
             RouteAssignmentRepository routeAssignmentRepository,
-            StockRepository stockRepository,
-            org.springframework.security.crypto.password.PasswordEncoder passwordEncoder
+            StockRepository stockRepository
     ) {
         return args -> {
             // Users
@@ -30,8 +29,7 @@ public class DataLoader {
                 User admin = User.builder()
                         .name("Admin User")
                         .email("admin@eislop.local")
-                        .password(passwordEncoder.encode("changeme"))
-                        .roles(new java.util.HashSet<>(java.util.Set.of("ADMIN")))
+                        .password("changeme")
                         .build();
                 userRepository.save(admin);
             }
@@ -61,9 +59,10 @@ public class DataLoader {
             // Vehicles
             if (vehicleRepository.count() == 0) {
                 Vehicle v = Vehicle.builder()
-                        .plateNumber("ABC-1234")
-                        .model("Van")
-                        .capacity(1200)
+                        .registrationNumber("ABC-1234")
+                        .type("Van")
+                        .capacityKg(1200)
+                        .status("AVAILABLE")
                         .build();
                 vehicleRepository.save(v);
             }
@@ -97,6 +96,7 @@ public class DataLoader {
             if (purchaseOrderRepository.count() == 0) {
                 PurchaseOrder po = PurchaseOrder.builder()
                         .orderNumber("PO-0001")
+                        .supplier("Acme Supplies")
                         .status("OPEN")
                         .totalAmount(299.99)
                         .expectedDate(LocalDate.now().plusDays(10))
@@ -107,7 +107,7 @@ public class DataLoader {
             // Stock
             if (stockRepository.count() == 0) {
                 Stock st = Stock.builder()
-                        .productId(productRepository.findAll().getFirst().getId())
+                        .productId(productRepository.findAll().get(0).getId())
                         .quantityOnHand(100)
                         .reorderLevel(20)
                         .build();
